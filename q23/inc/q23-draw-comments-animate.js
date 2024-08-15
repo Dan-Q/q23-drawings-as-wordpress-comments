@@ -13,9 +13,10 @@ for(svg of document.querySelectorAll('.q23-slow-svg')) {
 	observer.observe(svg);
 
 	svg.addEventListener('click', ()=>{
-		for(e of Array.from(svg.querySelectorAll('path, circle'))) {
-			e.style.transition = 'none'; // on clicking an SVG, skip through all the transitions
-		}
+                const clickedSvg = e.target.closest('svg');
+                for(e of Array.from(clickedSvg.querySelectorAll('path, circle'))) {
+                        e.style.transition = 'none'; // on clicking an SVG, skip through all the transitions
+                }
 	});
 }
 
