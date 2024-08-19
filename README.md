@@ -37,3 +37,10 @@ When outputting a comment, these instructions are converted into an SVG. The SVG
 (the number of strokes increases with each iteration, to gradually "accelerate" slow drawings). This can be drawn directly, as is is the case in the /wp-admin
 dashboard, but on the front-end an `IntersectionObserver` detects when the comment comes into the scroll area and it's then _animated_, drawing the strokes in
 the same order as the original artist did. Clicking a partially-redrawn comment skips the animation to the end.
+
+### What does the backend look like?
+
+Pretty much what you'd expect:
+
+![image](https://github.com/user-attachments/assets/a4cef94f-2a65-4de0-83ae-cc4173dfedf1)
+
