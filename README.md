@@ -22,6 +22,9 @@ Some inspiration may have been taken from _[Drawful](https://www.jackboxgames.co
 
 ### How does it work?
 
+**Important**: I needed to widen the `wp_comments.comment_content` column to `MEDIUMTEXT` e.g. `ALTER TABLE wp_comments MODIFY COLUMN comment_content MEDIUMTEXT;`
+because drawings are really big, otherwise even moderately-large drawings get truncated.
+
 For posts with a particular piece of metadata set, some Javascript is injected (users without Javascript continue to see the regular comment form). The
 Javascript replaces the comment text box with a `<canvas>`, and adds code to allow drawing on it.
 
